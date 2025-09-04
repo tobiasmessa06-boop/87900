@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+.juego, .carrito-item {
+  background: #000000;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.bg-ps5, .bg-ps4 {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #021e38;
+  color: #ffffff;
+}
+
+.bg-ps4 {
+  background-image: url("../assets/img/fondops4.jpeg");
+}
+
+.bg-ps5 {
+  background-image: url("../assets/img/fondops5.webp");
+}
+
+h1 {
+  color: #b141ac;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #00d1ff;
+  text-align: center;
+  margin-top: 30px;
+}
+
+p {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.6;
+}
+main p {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+}
+.navbar-brand img {
+  border-radius: 50%;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: #00d1ff;
+  transform: scale(1.05);
+}
+.navbar-nav .nav-link.active {
+  color: #00d1ff;
+  border-bottom: 2px solid #00d1ff;
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+.card .btn-primary {
+  background-color: #00d1ff;
+  border-color: #00d1ff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.card .btn-primary:hover {
+  background-color: #0099cc;
+  transform: scale(1.03);
+}
+
+footer {
+  border-top: 2px solid #00d1ff;
+}
+
+.social-icons a {
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: #00d1ff !important;
+}
+
+.img-hero {
+  max-width: 250px;
+}
+
+.carrito-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+}
+.carrito-item img {
+  width: 100px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+.carrito-item .info h5 {
+  margin: 0;
+}
+
+.grid-juegos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.juego {
+  text-align: center;
+}
+.juego img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.portada {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+.portada:hover {
+  transform: scale(1.5);
+}
+
+/*# sourceMappingURL=estilo.css.map */

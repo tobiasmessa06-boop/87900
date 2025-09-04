@@ -1,0 +1,194 @@
+
+$primary: #00d1ff;
+$secondary: #0099cc;
+$background: #021e38;
+$white: #ffffff;
+$black: #000000;
+
+$font-main: "Poppins", sans-serif;
+
+$container-max: 900px;
+$img-hero-size: 250px;
+$thumb-size: 100px;
+
+@mixin transition($props...) {
+  transition: $props;
+}
+
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+%card-style {
+  background: $black;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+%bg-fixed-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+body {
+  font-family: $font-main;
+  margin: 0;
+  padding: 0;
+  background-color: $background;
+  color: $white;
+}
+
+.bg-ps4 {
+  @extend %bg-fixed-cover;
+  background-image: url("../assets/img/fondops4.jpeg");
+}
+
+.bg-ps5 {
+  @extend %bg-fixed-cover;
+  background-image: url("../assets/img/fondops5.webp");
+}
+
+h1 {
+  color: #b141ac;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: $primary;
+  text-align: center;
+  margin-top: 30px;
+}
+
+p {
+  color: $white;
+  font-size: 18px;
+  line-height: 1.6;
+
+  main & {
+    max-width: $container-max;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include mobile {
+  h1 { font-size: 1.6rem; }
+  p  { font-size: 0.95rem; }
+}
+
+.navbar-brand img {
+  border-radius: 50%;
+}
+
+.navbar-nav {
+  .nav-link {
+    color: $white;
+    font-weight: 600;
+    @include transition(color 0.3s ease, transform 0.2s ease);
+
+    &:hover {
+      color: $primary;
+      transform: scale(1.05);
+    }
+
+    &.active {
+      color: $primary;
+      border-bottom: 2px solid $primary;
+    }
+  }
+}
+
+.card {
+  border: none;
+  @include transition(transform 0.3s ease, box-shadow 0.3s ease);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+    @include transition(background-color 0.3s ease, transform 0.2s ease);
+
+    &:hover {
+      background-color: $secondary;
+      transform: scale(1.03);
+    }
+  }
+}
+
+footer {
+  border-top: 2px solid $primary;
+}
+
+.social-icons {
+  a {
+    @include transition(color 0.3s ease);
+
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}
+
+.img-hero {
+  max-width: $img-hero-size;
+}
+
+.carrito-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carrito-item {
+  @extend %card-style;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: $thumb-size;
+    margin-right: 20px;
+    border-radius: 8px;
+  }
+
+  .info h5 {
+    margin: 0;
+  }
+}
+
+.grid-juegos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.juego {
+  @extend %card-style;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+}
+
+.portada {
+  width: 100%;
+  @include transition(transform 0.3s ease);
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}

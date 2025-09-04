@@ -1,0 +1,168 @@
+En este TXT se vera el estilo.css sin extend,mixin,variables y anidaciones para que se vea donde las aplique.
+
+Las variables las use para colores,tamaños y fuentes repetidas.Las Anidación las aplique en el navbar,social-icons,carrito y grid para evitar los selectores largos.
+El extend lo utilice para juntar estilos repetidos del carrito-item y juego.Y finalmente en el mixin lo use para manejar transiciones de forma que queden reutilizables y de forma limpia. :)
+
+CODIGO DE ESTILO.CSS:
+body {
+  background-color: #021e38; /*VARIABLES*/
+  color: white; /*VARIABLES*/
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------- NAVBAR ---------------- */
+// ANIDACIÓN
+.navbar {
+  background-color: #021e38; /*VARIABLES*/
+}
+
+.navbar-brand {
+  color: #00d1ff; /*VARIABLES*/
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: white; /*VARIABLES*/
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease; /* // MIXIN */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00d1ff; /*VARIABLES*/
+  transform: scale(1.05);
+}
+
+.navbar-nav .nav-link.active {
+  color: #00d1ff; /*VARIABLES*/
+  border-bottom: 2px solid #00d1ff; /*VARIABLES*/
+}
+
+/* ---------------- HEADER ---------------- */
+// ANIDACIÓN
+header {
+  background: url(../img/fondo.jpg) no-repeat center center/cover;
+  color: white; /*VARIABLES*/
+  padding: 100px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* ---------------- CARDS ---------------- */
+// MIXIN en las transiciones
+.card {
+  background: black; /*VARIABLES*/
+  color: white; /*VARIABLES*/
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* // MIXIN */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+}
+
+.card .btn-primary {
+  background-color: #00d1ff; /*VARIABLES*/
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* // MIXIN */
+}
+
+.card .btn-primary:hover {
+  background-color: #0099cc; /*VARIABLES*/
+  transform: scale(1.05);
+}
+
+/* ---------------- SOCIAL ICONS ---------------- */
+// ANIDACIÓN
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white; /*VARIABLES*/
+  font-size: 1.5rem;
+  transition: color 0.3s ease; /* // MIXIN */
+}
+
+.social-icons a:hover {
+  color: #00d1ff; /*VARIABLES*/
+}
+
+/* ---------------- GRID ---------------- */
+// ANIDACIÓN
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.grid-item {
+  background: black; /*VARIABLES*/
+  color: white; /* // VARIABLES */
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px; /* // EXTEND con carrito */
+}
+
+.grid-item img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.grid-item .btn {
+  margin-top: 10px;
+}
+
+/* ---------------- CARRITO ---------------- */
+// EXTEND con grid-item (comparten estilos)
+.carrito {
+  background: #021e38; /*VARIABLES*/
+  color: white; /*VARIABLES*/
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.carrito-item {
+  background: black; /*VARIABLES*/
+  padding: 15px;
+  border-radius: 8px; /* // EXTEND */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.carrito-item img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.carrito-item span {
+  flex-grow: 1;
+}
+
+/* ---------------- FOOTER ---------------- */
+// ANIDACIÓN
+footer {
+  background-color: #021e38; /*VARIABLES*/
+  color: white; /*VARIABLES*/
+  text-align: center;
+  padding: 20px 0;
+}
