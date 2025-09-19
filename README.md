@@ -21,6 +21,7 @@ Consiste en un sitio web en ventas de videojuegos para diferentes consolas,desar
 
 ## 🚀 Cómo usar
 1. Clonar o descargar este repositorio.  
-   ```bash git clone https://github.com/usuario/repositorio.git
+   ```bash
+   git clone https://github.com/usuario/repositorio.git
 
 👨‍💻 Autor: Tobias Agustín Messa
