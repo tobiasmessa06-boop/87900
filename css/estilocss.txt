@@ -166,6 +166,7 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+<<<<<<< HEAD
 
 En este TXT se vera el estilo.css sin extend,mixin,variables y anidaciones para que se vea donde las aplique.
 
@@ -335,3 +336,5 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+=======
+>>>>>>> 3495914ea3cea7e278fd92a4c7a1eab2e9ca78df
